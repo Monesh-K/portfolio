@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monesh's Site</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="x-icon" href="/images/icon.jpg">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/70c682a6d6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- ***************** PRELOADER START *************-->
+    <div class="preloader" id="preloader">
+      <div class="preloader_center">
+        <div class="preloader_ring"></div>
+        <span class="preloader_loading">loading...</span>
+      </div>
+      <script>
+        setTimeout(function () {
+          $(".preloader_center").fadeToggle();
+        }, 2500);
+      </script>
+    </div>
+    <!-- ***************** PRELOADER END *************-->
+
+    <!-- ----------PROFILE CARD HOVER START---------- -->
+    <div class="card__collection clear-fix">
+      <div class="cards cards--two">
+        <img
+          src="/images/IMG20221025082415~2.jpg"
+          class="img-responsive"
+          alt="Monesh K"
+        />
+        <span class="cards--two__rect"></span>
+        <span class="cards--two__tri"></span>
+        <p>
+          Monesh K <br />
+          <p style="font-size: 16px"><br />Inquisitive Engineer</p>
+        </p>
+        <ul class="cards__list">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/monesh-k-31284a24b/"
+              target="_blank"
+              ><i class="fab fa-linkedin icon"></i
+            ></a>
+          </li>
+          <li>
+            <a href="mailto:moneshmone2003@gmail.com" target="_blank"
+              ><i class="fa fa-envelope icon"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/Monesh-K" target="_blank"
+              ><i class="fab fa-github icon"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://t.me/Stormbreaker0407" target="_blank"
+              ><i class="fab fa-telegram icon"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <header>
+        <h2 style="margin-top: 100px">Monesh K</h2>
+        <p id="programmer">
+          Passionate Engineer driven by curiosity and equipped with a versatile
+          skill set in various programming languages. Seeking an exciting
+          opportunity to apply expertise, explore uncharted territories, and
+          spark innovative advancements.
+        </p>
+        <a href="/My Resume 14.07.pdf" target="_blank" download
+          ><button>Resume</button></a
+        >
+      </header>
+    </div>
+    <!--------------PROFILE CARD HOVER END---------- -->
+
+    <!-- /* -----------SKILL PROGRESS START-------------- */ -->
+    <section>
+      <h2 style="margin-top: 20px">Technical Skills</h2>
+      <div class="back">
+        <div id="grid-container" class="wrapper">
+          <div class="card grid-item">
+            <div class="circle">
+              <div class="bar"></div>
+              <div class="box"><span></span></div>
+            </div>
+            <div class="text">Python</div>
+          </div>
+          <div class="card html grid-item">
+            <div class="circle">
+              <div class="bar"></div>
+              <div class="box"><span></span></div>
+            </div>
+            <div class="text">HTML</div>
+          </div>
+          <div class="card css grid-item">
+            <div class="circle">
+              <div class="bar"></div>
+              <div class="box"><span></span></div>
+            </div>
+            <div class="text">CSS</div>
+          </div>
+          <div class="card sql grid-item">
+            <div class="circle">
+              <div class="bar"></div>
+              <div class="box"><span></span></div>
+            </div>
+            <div class="text clr">SQL</div>
+          </div>
+          <div class="card c grid-item">
+            <div class="circle">
+              <div class="bar"></div>
+              <div class="box"><span></span></div>
+            </div>
+            <div class="text clr">C</div>
+          </div>
+          <div class="card java grid-item">
+            <div class="circle">
+              <div class="bar"></div>
+              <div class="box"><span></span></div>
+            </div>
+            <div class="text clr">Java</div>
+          </div>
+        </div>
+      </div>
+      <script>
+        let options = {
+          startAngle: -1.55,
+          value: 0.85,
+          size: 150,
+          fill: {
+            gradient: ["#7d2ae8", "#004e92"],
+          },
+        };
+        setTimeout(function () {
+          $(".circle .bar")
+            .circleProgress(options)
+            .on(
+              "circle-animation-progress",
+              function (event, progress, stepValue) {
+                $(this)
+                  .parent()
+                  .find("span")
+                  .text(String(stepValue.toFixed(2).substr(2)) + "%");
+              }
+            );
+        }, 2800);
+        setTimeout(function () {
+          $(".html .bar").circleProgress({
+            value: 0.9,
+          });
+        }, 2800);
+        setTimeout(function () {
+          $(".css .bar").circleProgress({
+            value: 0.8,
+          });
+        }, 2800);
+        setTimeout(function () {
+          $(".sql .bar").circleProgress({
+            value: 0.7,
+          });
+        }, 2800);
+
+        setTimeout(function () {
+          $(".c .bar").circleProgress({
+            value: 0.8,
+          });
+        }, 2800);
+        setTimeout(function () {
+          $(".java .bar").circleProgress({
+            value: 0.5,
+          });
+        }, 2800);
+      </script>
+    </section>
+    <!-- /* -----------SKILL PROGRESS END-------------- */ -->
+
+    <!-- ----------------------INTERNSHIP START------------------------------->
+
+    <h2 style="margin-top: 10px">Internships</h2>
+    <div class="containerss">
+      <div class="cardss" style="--clr: #009688">
+        <div class="img-boxss">
+          <img src="/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg" />
+        </div>
+        <div class="contentss">
+          <h2 style="font-size: 16px">Full Stack Development</h2>
+          <p>
+            Once, web development felt daunting, but an internship changed
+            everything. Now, building websites is a breeze. I've even crafted
+            some projects from what I've learnt in the internship.
+            <a href="/images/full stack .jpg" target="_blank">Certificate</a>
+          </p>
+        </div>
+      </div>
+      <div class="cardss" style="--clr: #009688">
+        <div class="img-boxss">
+          <img src="/images/opt-lasers-KshEaH06rV8-unsplash.jpg" />
+        </div>
+        <div class="contentss">
+          <h2 style="font-size: 16px">CNC and VMC Machines</h2>
+          <p>
+            The production of various components by CNC machine and the
+            manufacturing processes like casting, machining, and cutting were
+            carried out in the company during internship.
+            <a href="/images/Woosu Monesh.jpg" target="_blank">Certificate</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------------INTERNSHIP END------------------------------->
+
+    <!-- -------------------PROJECTS START---------------- -->
+    <h2 style="margin-top: 10px">Projects</h2>
+    <div class="containeri">
+      <div class="cardi">
+        <div class="face face1">
+          <div class="contenti">
+            <img src="/images/code_128.png" />
+            <h3 style="font-size: 20px">Login Page</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="contenti">
+            <p style="font-size: medium">
+              Developed a captivating Dynamic Registration and Login system with
+              MySQL integration, featuring a responsive UI.
+            </p>
+            <a href="https://monesh-k0407.000webhostapp.com/" target="_blank"
+              >Project Link</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="cardi">
+        <div class="face face1">
+          <div class="contenti">
+            <img src="/images/launch_128.png" />
+            <h3 style="font-size: 20px">Portfolio</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="contenti">
+            <p style="font-size: medium">
+              Crafted an impressive personal portfolio website showcasing
+              proficiency in HTML, CSS, and JavaScript, highlighting creative
+              projects and web wonders.
+            </p>
+            <a href="">Project Link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------PROJECTS END---------------- -->
+
+    <!-- ----------------------CERTIFICATION START---------------->
+    <h2>Certifications</h2>
+
+    <div class="deck">
+      <div class="central-wrapper">
+        <div class="image">
+          <div class="item plane3 left">
+            <img src="/images/python basic.png" alt="python basic" />
+          </div>
+          <div class="item plane2 left">
+            <img
+              src="/images/CertificateOfCompletion_HTML Essential Training_page-0001.jpg"
+              alt="html"
+            />
+          </div>
+          <div class="item plane1">
+            <img src="/images/problem solving.png" alt="problem solving" />
+          </div>
+          <div class="item plane2 right">
+            <img
+              src="/images/CertificateOfCompletion_SQL Essential Training 2019_page-0001.jpg"
+              alt="sql"
+            />
+          </div>
+          <div class="item plane3 right">
+            <img src="/images/Guvi Face recognition.png" alt="guvi" />
+          </div>
+
+          <div class="button left">
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3521175/MiniArrowLeft.svg"
+              alt="left arrow"
+            />
+          </div>
+          <div class="button right">
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3521175/MiniArrowRight.svg"
+              alt="right arrow"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/javascript.js"></script>
+
+    <!-- ----------------------CERTIFICATION END---------------->
+
+    <!-- footer section starts -->
+    <section class="footer" id="footer">
+      <div class="socials">
+        <a href="mailto:moneshmone2003@gmail.com" target="_blank"
+          ><i class="bx bxl-gmail"></i
+        ></a>
+        <a href="https://github.com/Monesh-K" target="_blank"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/monesh-k-31284a24b/"
+          target="_blank"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a href="https://t.me/Stormbreaker0407" target="_blank"
+          ><i class="bx bxl-telegram"></i
+        ></a>
+      </div>
+      <p2>Created By Monesh K |&copy;2023 </p2>
+    </section>
+  </body>
+</html>
